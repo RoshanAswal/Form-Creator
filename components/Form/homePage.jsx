@@ -6,19 +6,20 @@ import Link from "next/link";
 
 import Image from "next/image";
 
-import leftArrow from '../public/images/left-chevron.png'
-import rightArrow from '../public/images/right-chevron.png';
+import leftArrow from '../../public/images/left-chevron.png'
+import rightArrow from '../../public/images/right-chevron.png';
 
 import axios from "axios";
 
-const home =() => {
+const homePage = async () => {
 
   const [forms,setForms]=useState();
 
   useEffect(()=>{
     const getFormsFunction=async ()=>{
       const response=await axios.get("http://localhost:3001/");
-      setForms(response.data.data);
+      setForms(response.data);
+      console.log(response);
     }
     getFormsFunction();
   },[]);
@@ -49,12 +50,12 @@ const home =() => {
           }
         </div>
         <div className={styles.direction}>
-          {/* <Image className={styles.img1} src={leftArrow} alt="left"/>
-          <Image className={styles.img2} src={rightArrow} alt="right"/> */}
+          <Image className={styles.img1} src={leftArrow} alt="left"/>
+          <Image className={styles.img2} src={rightArrow} alt="right"/>
         </div>
       </div>
     </div>
   );
 };
 
-export default home;
+export default homePage;

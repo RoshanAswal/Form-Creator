@@ -1,0 +1,105 @@
+.formPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color:rgb(28,37,89);
+}
+
+.formDiv{
+    width:90%;
+    height:100%;
+    background-color: #F9F6FC;
+
+    margin:3% 0 10%;
+    position:relative;
+}
+
+/*---------------- Header Section ----------------*/
+.headerDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    background-color: rgb(236, 232, 232);
+    height:20%;
+    padding:3% 2%;
+}
+.headerDiv h1{
+    margin-right:10%;
+}
+
+.headerDiv button,.optionsDiv button{
+    font-size: 20px;
+    max-width:200px;
+    min-width:150px;
+  
+    color:rgb(28,37,89);
+    background-color: rgb(0,0,0,0);
+    
+    padding:5px;
+    border:1px solid rgb(28,37,89);
+}
+
+.headerDiv button:hover,.optionsDiv button:hover{
+    cursor: pointer;
+    animation:backColor .4s ease forwards;
+}
+
+/*--------------------- FormInfo Section ---------------*/
+
+.formInfoDiv{
+    padding:3%;
+    display: flex;
+    flex-direction: column;
+    gap:40px;
+}
+.formInfoDiv div{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+.formInfoDiv div label{
+    font-weight: bold;
+}
+.formDiv div h2{
+    background-color: rgb(236, 232, 232);
+    font-size: 15px;
+    font-weight: 300;
+    padding:10px;
+}
+
+.formInfoDiv div input{
+    background-color: rgb(236, 232, 232);
+    padding:1%;
+    border:none;
+    color:grey;
+
+    border:1px solid rgb(28,37,89,.5);
+}
+/*--------------- Options Div -----------------*/
+.optionsDiv{
+    width:100%;
+    text-align: right;
+    background-color: rgb(236, 232, 232);
+  
+    padding:2% 3%;
+}
+
+.optionsDiv button{
+    margin-left:2%;
+    min-width: 100px;
+}
+
+/*------------------- Animation -----------------*/
+
+@keyframes backColor{
+    0%{
+        /* background-color: rgb(0,0,0,0); */
+        color:rgb(28,37,89);
+    }
+    100%{
+        background-color:rgb(28,37,89);
+        color:white;
+    }
+  }
